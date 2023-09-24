@@ -1,0 +1,129 @@
+# Diagrama de implementación
+- Los diagramas de implementación permiten visualizar la arquitectura física del hardware, el software y los artefactos del sistema.
+- Tipos de diagrama:
+	- Los <mark style="background: #FF5582A6;">diagramas de componentes</mark> se utilizan para modelar la vista de implementación estática de un sistema, es decir las dependencias entre las partes de código del sistema. (físico)
+	- Los <mark style="background: #FF5582A6;">diagramas de despliegue</mark> se utilizan para modelar la vista de despliegue estático, es decir la estructura del sistema en ejecución.
+- Referencias:
+	- https://sparxsystems.com/resources/tutorials/uml/use-case-model.html
+	- https://www.monografias.com/trabajos34/ingenieria-software/ingenieria-software
+## Diagrama de componentes
+- Se utilizan para modelar la vista (lógica) de implementación estática de un sistema.
+	- Para modelar código fuente.
+	- Para modelar versiones ejecutables.
+	- Para modelar bases de datos físicas.
+	- Para modelar sistemas adaptables.
+- Es un tipo especial de diagrama de clases, que se centra en las componentes de un sistema. Formado por:
+	- Componentes
+	- Dependencias de interfaces
+	- Comunicaciones
+	- Relaciones de dependencia, generalización, asociación y realización.
+
+- #### Términos y conceptos
+	- ##### Componentes y clases:
+		- Las clases representan abstracciones lógicas y las componentes abstracciones físicas.
+		- Las componentes pueden vivir en nodos, las clases NO.
+		- Las clases contienen atributos y operaciones, los componentes solo contienen operaciones alcanzables por sus interfaces.
+	- ##### Componentes e interfaces
+		- Interfaces: son puntos visibles de entrada o los servicios que un componente ofrece.
+		- El uso de interfaces para unir componentes es muy común.
+		- Un componente puede importar o exportar interfaces.
+		- ![[Pasted image 20230912141903.png]]
+	- ##### Un componente es fácilmente reemplazable
+		- Es físico
+		- Reemplazable
+		- Parte del sistema
+		- Proporciona un conjunto de interfaces
+- #### Tipos de componentes
+	- Componentes de despliegue: necesarios para formar un sistema ejecutable (.exe, .dll, etc)
+	- Componentes de producto de trabajo: generados del proceso de desarrollo.
+	- Componentes de ejecución: consecuencia de la ejecución del sistema.
+	- Los componentes se pueden agrupar en paquetes 
+	- Esteoreotipos:
+		- Executable: especifica un componente que se puede ejecutar en un nodo.
+		- Library: especifica una biblioteca de objetos estática o dinámica.
+		- Table: especifica un componente que representa una tabla de una base de datos.
+		- File: especifica un componente que representa un documento que contiene código fuente o datos.
+		- Document: especifica un componente que representa un documento.
+- #### Notación
+	- ![[Pasted image 20230912141042.png]]
+- #### Componentes
+	- Requisitos
+		- Indicar sus obligaciones contractuales (servicios que proveen el modelo).
+		- Ayudan a documentar el comportamiento funcional de los elementos de software.
+	- Restricciones
+		- Indican el entorno en el que operan
+	- Escenarios
+		- Descripciones textuales y procedimentales de las acciones de un objeto a lo largo del tiempo y describen la forma en que las componentes trabajan. Se pueden crear múltiples escenarios para describir tanto el camino básico (una ejecución perfecta) como las excepciones, errores y otras condiciones.
+	- Trazabilidad
+		- La componente puede implementar otro elemento del modelo (por ejemplo caso de uso).
+		- Un componente puede ser implementado por otro elemento (por ejemplo un paquete de clases).
+- #### Consideraciones y usos
+	- Muestran la organización y dependencias lógicas de las componentes. Se deben tener en consideración los siguientes requisitos:
+		- Facilidad de desarrollo.
+		- Gestión del software.
+		- Reutilización.
+		- Restricciones impuestas por los lenguajes de programación.
+		- Herramientas usadas para el desarrollo.
+- #### Componentes en despliegue
+	- En los diagramas de despliegue pueden mostrarse las asociaciones existentes entre los nodos y los componentes.
+	- ![[Pasted image 20230912142054.png]]
+- #### Componentes y nodos
+	- ![[Pasted image 20230912142116.png]]
+### Ejemplo 
+- Modelar el diagrama de componentes para proveer una vista conceptual/lógica de la construcción de un sistema:
+	- Servidor. 
+	- Seguridad de tienda de libros on-line. 
+	- Servidor Web. 
+	- Firewall 
+	- Paginas ASP (Active Server Pages)
+	
+![[Pasted image 20230912142234.png]]
+
+## Diagrama de despliegue
+- Representa la arquitectura de ejecución de los sistemas.
+- Muestra artefactos del sistema como nodos, los cuales son conectados mediante caminos de comunicación para crear redes de complejidad arbitraria.
+- Los nodos son definidos de forma anidada, representando dispositivos de hardware como entornos de ejecución de software.
+- También conocido como modelo físico.
+- Muestra las relaciones físicas entre los componentes de hardware y software en el sistema final así como su configuración. 
+- Formados por instancias de componentes de software que representan manifestaciones de código en tiempo de ejecución. 
+- Representación: grafo de nodos unidos por conexiones de comunicación. 
+- Diagramas de clases que se ocupan de representar el sistema.
+
+- ### Nodos
+	- Un nodo representa un tipo de recurso computacional sobre el que se pueden desplegar artefactos para su ejecución.
+	- Un nodo a su vez puede albergar otros nodos. en una estructura anidada.
+	- Dos posibles estereotipos:
+		- Dispositivos de hardware tales como un computador, un procesador, un teléfono, etc.
+		- Entornos de ejecución: sistemas o software que contienen software desarrollado tales como, sistemas operativos, servidores, clientes web, etc.
+	- #### Notación
+		- ![[Pasted image 20230912143109.png]]
+	- #### Relación entre nodos
+		- Las asociaciones entre nodos permiten modelar:
+			- Un canal de comunicaciones existente entre nodos y el tipo.
+			- La cardinalidad de la relación.
+			- ![[Pasted image 20230912143153.png]]
+- ### Artefactos
+	- Representan la especificación de un elemento de implementación concreto y real.
+	- Generalmente archivos (ejecutables, de datos, de configuración, HTML, documentos, resultados del proceso de desarrollo, etc)
+	- Los artefactos se despliegan en los nodos, indicando que recurso computacional los va a albergar y en su caso ejecutar.
+	- ![[Pasted image 20230912143256.png]]
+- ### Usos
+	- Aunque UML no es un lenguaje para especificar hardware, permite modelar muchos de estos aspectos
+	- Suficiente para que:
+		- Un ingeniero de software especifique la plataforma de ejecución del software. 
+		- Un ingeniero de sistemas maneje la frontera entre el software y el hardware.
+	- Sistemas empotrados: colección de hardware con gran cantidad de software que controla los dispositivos. 
+	- Sistemas cliente-servidor: conectividad de red sobre los servidores y distribución física de los nodos. 
+	- Sistemas distribuídos: Incluyen varios niveles de servidores y contemplan cambio continuo de topología.
+- ### Ejemplo 1
+	- Modelar el diagrama de despliegue de un servidor en producción en cluster que corre bajo el servidor de aplicaciones con conexión a una BD con Data Warehouse.
+	- ![[Pasted image 20230912143554.png]]
+ - ### Ejemplo 2
+	 - Diagrama de despliegue de una aplicación web: 
+	 - Cliente Web: navegador convencional. 
+	 - Cliente móvil: cualquiera 
+	 - Servidor de aplicaciones, servidor web e interfaces 
+	 - Base de datos
+	 - ![[Pasted image 20230912143632.png]]
+
+
