@@ -12,7 +12,7 @@
 
 ### ¿Qué debería hacer el SO cuando esto ocurre?
 
-- Interrupción por timeout
+- #### Interrupción por timeout
 	- Timer interrupt es la manera que el SO tiene para lograr recuperar el control de la CPU
 	- Funcionamiento -> Al iniciar, el SO le dice a la CPU que ejecutar cuando ocurra un timeout E inicializa el timer que controla el tiempo Luego cuando un programa se ejecuta, si ocurre un timer, se realiza un context switch y el control se pasa a otro proceso
 	- ![[Pasted image 20230912105630.png]]

@@ -1,31 +1,30 @@
-### Sistema Operativo
+## Sistema Operativo
 
-- Definición: Es un software que abstrae y controla los recursos de hardware de un computador, tiene 3 tareas **fundamentales**:
+- ### Definición: Es un software que abstrae y controla los recursos de hardware de un computador, tiene 3 tareas **fundamentales**:
 	- Esconder la complejidad del hardware
 	- Manejo de recursos 
 	- Proveer de aislamiento y protección 
-- Elementos
-	- Abstracciones:
+- ### Elementos
+	- #### Abstracciones:
 		- Hardware: Memoria, archivo, sockets, ...
 		- Procesos, threads
-	- Mecanismos: 
+	- #### Mecanismos: 
 		- Cómo crear, ejecutar un proceso
 		- Cómo reservar memoria
-	 - Políticas:
+	 - #### Políticas:
 		 - Tamaño de memoria que un proceso puede solicitar 
 		 - Número de sockets que un proceso puede abrir
 		 - Qué espacio de memoria liberar primero 
-- Manejo de memoria
-	- Abstracción:
+- ### Manejo de memoria
+	- #### Abstracción:
 		- Memory page (Bloque contiguo de memoria virtual)
-	 - Mecanismos:
+	 - #### Mecanismos:
 		 - Reservar, asignar a un proceso 
-	 - Política: 
+	 - #### Política: 
 		 - Least Recently Use (LRU) (Estrategia de almacenamiento en caché)(https://www.topcoder.com/thrive/articles/lru-cache#:~:text=Least%20Recently%20Used%20(LRU)%20is,be%20asked%20with%20some%20variation.)
 
-### ¿Cómo diseñar un sistema operativo?
-
-- Principios 
+## ¿Cómo diseñar un sistema operativo?
+- ### Principios 
 	1. Separar mecanismos de políticas
 		- Mecanismos flexibles para soportar muchas políticas
 		- Memoria: Mecanismos -> procesos; Políticas -> manejo(LRU, LFU, random)
@@ -45,7 +44,6 @@
 ### System calls 
 
 ![[Pasted image 20230831123254.png]]
-
 - Asociadas con un código que define que operación llamar, de donde obtener los argumentos y el valor de ellos 
 ![[Pasted image 20230831123540.png]]
 

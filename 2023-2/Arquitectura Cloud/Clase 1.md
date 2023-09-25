@@ -2,7 +2,7 @@
 
 ### Software as a service 
 - Permite a los usuarios conectarse a aplicaciones basadas en la nube a través de internet y usarlas. 
-- El proveedor de servicios proporciona y gestiona toda la pila de aplicaciones a través de Internet, desde la infraestructura de hardware hasta la propia aplicación. El proveedor se encarga de gestionar todas las actualizaciones, corregir errores y otros pasos de mantenimiento generales. Solo tienes que conectarte a la aplicación.
+- El<mark style="background: #FFF3A3A6;"> proveedor de servicios proporciona y gestiona toda la pila de aplicaciones a través de Internet</mark>, desde la infraestructura de hardware hasta la propia aplicación. El proveedor se encarga de gestionar todas las actualizaciones, corregir errores y otros pasos de mantenimiento generales. <mark style="background: #FFF3A3A6;">Solo tienes que conectarte a la aplicación.</mark>
 
    El proveedor administra hardware y software
 	- Ejemplos: Correo electrónico, calendarios, herramientas como Office 365
@@ -15,14 +15,14 @@
 
 ### Function as a service
 
-- La función como servicio (FaaS) es un tipo de servicio de cloud computing que permite a los desarrolladores diseñar, ejecutar y gestionar paquetes de aplicaciones como funciones sin tener que preocuparse por el mantenimiento de su propia infraestructura
+- La función como servicio (FaaS) es un tipo de servicio de cloud computing que permite a los desarrolladores diseñar, <mark style="background: #FFF3A3A6;">ejecutar y gestionar paquetes de aplicaciones como funciones sin tener que preocuparse por el mantenimiento de su propia infraestructura</mark>
 - Típicamente usado para construir microservicios
-- FaaS te permite compilar e implementar un pequeño fragmento de código, o una función, que realiza una tarea específica. El proveedor de servicios en la nube agrega escalamiento si es necesario cuando se ejecuta una función
+- FaaS te permite <mark style="background: #FFF3A3A6;">compilar e implementar un pequeño fragmento de código, o una función, que realiza una tarea específica.</mark> El proveedor de servicios en la nube agrega escalamiento si es necesario cuando se ejecuta una función
 
 ### Platform as a service
 
-- El proveedor de servicios proporciona y gestiona todos los recursos de hardware y software necesarios para el desarrollo de aplicaciones. Tú escribes el código y gestionas todas las aplicaciones y datos, pero no tienes que gestionar la plataforma de desarrollo de software ni mantenerla.
-- Ejemplo: google app engine, google cloud run 
+- El proveedor de servicios proporciona y gestiona todos los recursos de hardware y software necesarios para el desarrollo de aplicaciones. <mark style="background: #FFF3A3A6;">Tú escribes el código y gestionas todas las aplicaciones y datos, pero no tienes que gestionar la plataforma de desarrollo de software ni mantenerla.</mark>
+- Ejemplo: <mark style="background: #ABF7F7A6;">google app engine, google cloud run </mark>
 - Ventajas: 
 	- Tiempo de lanzamiento más rápido
 	- Escalabilidad fácil: PaaS te permiten reducir verticalmente en periodos de poco tráfico o escalar verticalmente para hacer frente a los aumentos inesperados en la demanda.
@@ -31,18 +31,18 @@
 
 ### Container as a service 
 
-- Esencialmente alojamiento e implementación automatizados de paquetes de software en contenedores
+- Esencialmente <mark style="background: #FFF3A3A6;">alojamiento e implementación automatizados de paquetes de software en contenedores</mark>
 - Los tiempos de ejecución de contenedores ofrecen configuración y virtualización del sistema operativo, lo que permite una personalización y control avanzados. Los contenedores pueden ser fundamentales para el desarrollo de software altamente personalizado y especializado. Sin embargo, para software más genérico y estándar, PaaS suele ser la mejor opción.
 - CaaS puede ser una mejor opción para los microservicios , ya que cada contenedor implementado en CaaS puede tener su propio sistema operativo y pila de lenguaje encapsulados.
 
 ### Infraestructure as a service
 
-- Es un modelo de servicio en la nube que ofrece recursos de infraestructura bajo demanda, como computación, almacenamiento, redes y virtualización, a empresas y particulares a través de la nube.
+- Es un modelo de servicio en la nube que ofrece recursos de <mark style="background: #FFF3A3A6;">infraestructura bajo demanda, como computación, almacenamiento, redes y virtualización</mark>, a empresas y particulares a través de la nube.
 - Este es el método más rápido y económico de migrar una aplicación o carga de trabajo a la nube. Sin refactorizar su arquitectura subyacente, puede aumentar la escala y el rendimiento, mejorar la seguridad y reducir los costos de ejecución de una aplicación o carga de trabajo.
 
 ### Traditional on premises
 
-- Tú manejas hasta el hardware utilizado, generalmente data centers propios de la empresa o alquilados
+- Tú manejas hasta el hardware utilizado, generalmente <mark style="background: #FFF3A3A6;">data centers propios</mark> de la empresa o alquilados
 
 - **¿Qué diferencia hay entre CaaS y FaaS?**
 	- CaaS se centra en el despliegue de aplicaciones en contenedores, que son unidades de implementación más grandes y completas. Los contenedores pueden incluir múltiples componentes y servicios.
