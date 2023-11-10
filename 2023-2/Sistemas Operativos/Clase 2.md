@@ -1,6 +1,6 @@
 - ### Procesos
 	- Una de las abstracciones más fundamentales en sistemas operativos
-	- Definición: Es un programa en ejecución
+	- <mark style="background: #FFF3A3A6;">Definición: Es un programa en ejecución</mark>
 	- Partes que conforman un proceso:
 		- Estado de ejecución
 		- Área temporal de datos
@@ -27,12 +27,11 @@
 	- #### Stack Pointer
 		- Registro apuntador a la posición de memoria donde se encuentra la pila
 - ### Program Control Block 
-	- Estructura de datos que el SO mantiene para cada proceso 
+	- <mark style="background: #FFB86CA6;">Estructura de datos que el SO mantiene para cada proceso</mark> 
 		- Creada cuando el proceso es creado
 		- Actualizado cuando el proceso cambia
 			- Poco frecuente
 			- Frecuente -> CPU register
-			
 			- ![[Pasted image 20230911112758.png]]
 - ### Context Switch
 	- Mecanismo usado por el SO para cambiar en la CPU el contexto de un proceso por el de otro 

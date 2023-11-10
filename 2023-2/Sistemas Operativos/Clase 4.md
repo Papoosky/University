@@ -1,4 +1,4 @@
-# Métricas
+## Métricas
 - Las métricas son aquellos datos expresados numéricamente que nos sirven para analizar el rendimiento de un determinado proceso.
 - Nosotros lo usaremos para comparar las distintas <mark style="background: #FF5582A6;">políticas de programación de procesos</mark>.
 
@@ -46,7 +46,7 @@
 - Ejemplo 1 -v7 
 	- ![[Pasted image 20230918134422.png]]
 ### Cuarta política: **Round Robin**
-- RR o Time slicing divide los procesos en períodos de tiempos (time slice o scheduling quantum) y ejecuta “poco a poco” cada proceso Los períodos de tiempo pueden ser cualquier múltiplo de el timer interrupt
+- RR o Time slicing divide los procesos en períodos de tiempos (time slice o scheduling quantum) y ejecuta “poco a poco” cada proceso. Los períodos de tiempo pueden ser cualquier múltiplo de el timer interrupt
 - Ejemplo 1 - v8
 	- ![[Pasted image 20230918191421.png]]
 - RR tiene el problema de determinar cuál time slice es el óptimo de forma de tener buen response time, pero no hacer el sistema inestable por demasiados cambios de contexto → Amortización

@@ -39,7 +39,6 @@
 
 - ### Firewall
 	- Un firewall es un dispositivo o programa de software diseñado para controlar y gestionar el tráfico de red entre una red privada o segura y una red no confiable, como Internet. Su función principal es actuar como una barrera de seguridad que decide qué tráfico se permite o se bloquea según ciertas reglas y políticas de seguridad. 
-	
 	- ![[Pasted image 20230923175340.png]]
 - ### WAF
 	- Un WAF es una solución específica de seguridad cibernética diseñada para proteger aplicaciones web contra amenazas y ataques dirigidos a nivel de aplicación. A diferencia de un firewall tradicional, que se centra en el tráfico de red en general, un WAF está diseñado específicamente para proteger aplicaciones web. 

@@ -1,0 +1,79 @@
+- El análisis de Big Data consiste en examinar grandes cantidades de datos para descubrir patrones, correlaciones y otra información oculta. 
+- Los data lakes y data warehouses son dos de los repositorios de datos más populares para almacenar y analizar datos masivos.
+- ## Data Warehouse
+	- Repositorio de datos que almacena datos estructurados, filtrados y procesados que han sido tratados para un propósito específico.
+	- Almacenan grandes cantidades de datos recopilados por diferentes fuentes, normalmente utilizando esquemas predefinidos, lo que facilita la realización de consultas complejas.
+	- Los data warehouses están diseñados para el análisis de datos de alto rendimiento.
+	- Los datos se extraen periódicamente de las bases de datos.
+	- Se duplican en unidades de procesamiento especializados.
+	- Utilizan el procesamiento analítico en línea (online analytical processing, OLAP)
+	- Se ocupan principalmente de la asistencia para la toma de decisiones.
+	- ![](https://lh7-us.googleusercontent.com/m6FeC7UDPj_k4ABbm-GwY1_58dHA4ld1EmvxbKhAXdXrcjRw9i_zKxkqClQH5tMlJNKrEQgVtuv_UMa-gDn9MC_BV2Piv3sD6bcEyu8mR0AEq2cLJV2AI5wZ9BWh52zlM0vQEkiFs0oJCPCHMC4BK4K3lQ=s2048)
+	- ###  Ventajas:
+		- Estructura y organización: Están diseñados para almacenar datos estructurados en una forma altamente organizada, facilita consulta y análisis.
+		- Rendimiento optimizado: Consultas de alto rendimiento
+	- ### Desventajas:
+		- Estructura rígida: Limitante en términos de flexibilidad para acomodar nuevos tipos de datos.
+		- Limites de escalabilidad a medida que los datos crecen.
+	- ### Tipos de arquitectura:
+		- #### Arquitectura de un solo nivel:
+			- Este tipo de modelo de una sola capa minimiza la cantidad de datos almacenados. Ayuda a eliminar la redundancia de datos. Sin embargo, su desventaja es la falta de un componente que separe el procesamiento analítico y transaccional. Este tipo de arquitectura no se utiliza con frecuencia en la práctica.
+		- #### Arquitectura de dos niveles:
+			- Este modelo separa las fuentes disponibles físicamente y el data warehouse mediante un área de preparación -staging-. Esta arquitectura asegura que todos los datos cargados en el almacén estén en un formato limpio y adecuado. Sin embargo, esta arquitectura no es escalable ni puede soportar muchos usuarios finales. Además, tiene problemas de conectividad debido a las limitaciones de la red.
+		- #### Arquitectura de tres niveles:
+			- Esta es la arquitectura más utilizada para data warehouses. Consta de un nivel superior, medio e inferior. En el nivel inferior, los datos se limpian, transforman y cargan a través de herramientas de backend. Este nivel sirve como base de datos del data warehouse. El nivel medio es un servidor OLAP que presenta una vista abstracta de la base de datos actuando como mediador entre el usuario final y la base de datos. El nivel superior, la capa de cliente de front-end, consta de las herramientas y una API que se utilizan para conectarse y obtener datos del data warehouse (por ejemplo, herramientas de consulta, herramientas de informes, herramientas de consulta administradas, herramientas de análisis y herramientas de minería de datos).
+		- **![](https://lh7-us.googleusercontent.com/4Yc2lzCX87MJAU17AzYAYMggNmNE2uEQQpuEDOVaZtTVfSQkv7PnPkE8IYgoqElnSzcguVqMB7duavOmKLTMP9Hcl7JxhVynSj-hnPbhkW7f5eGXOG78pl52IRvnarWTd9M9p9RnsIPZK65myaqlg3CZ3Q=s2048)**
+		- <mark style="background: #FF5582A6;">Base de datos del data warehouse:</mark> La base de datos central es el núcleo del entorno de un data warehouse. Se implementa utilizando tecnología RDBMS (sistemas de gestión de bases de datos relacionales). 
+		- <mark style="background: #FF5582A6;">Herramientas ETL</mark> (extracción, transformación y carga): Las herramientas ETL llevan a cabo todas las conversiones, resúmenes y cambios necesarios para transformar los datos en un formato unificado en el data warehouse. El proceso ETL ayuda al data warehouse a lograr un mejor rendimiento del sistema y de la inteligencia empresarial, un acceso oportuno a los datos y un alto retorno de la inversión.
+		- <mark style="background: #FF5582A6;">Metadatos:</mark> Los metadatos son datos sobre los datos que definen el data warehouse. Incluyen información sobre el origen, el uso, los valores y las características de los datos del data warehouse, así como sobre cómo actualizar y procesar los datos. Los metadatos juegan un papel importante en la transformación de los datos en conocimiento.
+		- <mark style="background: #FF5582A6;">Herramientas de consulta</mark>: Las herramientas de consulta permiten a los usuarios interactuar con el sistema DW y recopilar información relevante para las empresas para tomar decisiones estratégicas.
+
+- ## Data Lake:
+	- Vasto conjunto de datos para los cuales el propósito no está definido.
+	- Repositorio de datos que almacena datos sin procesar en su formato original hasta que se necesitan para aplicaciones de análisis. 
+	- Los data lakes son flexibles y escalables, lo que les permite almacenar y procesar grandes cantidades de datos de diferentes tipos, incluidos datos estructurados, semiestructurados y no estructurados.
+	- Permite a las organizaciones almacenar sus datos de diferentes fuentes sin ningún tipo de gasto relacionado con la transformación de los datos. 
+	- Permite realizar análisis de datos ad hoc sobre estos datos, que luego pueden ser utilizados por las organizaciones para obtener información clave y tomar decisiones basadas en datos.
+	- Se elimina la transformación y el preprocesamiento complejos de los datos en el caso de los data warehouses.
+	- ![](https://lh7-us.googleusercontent.com/CHDZP_iqSKbLkBv7tTGFqLgns2q1liuCojUwdza1O2ET3lZgzX31eNXZeeZ4-sk5o23Hz9gbu_3bgdptiila1fWfsqVg-PbykqciSnpWki8UCtNcMLvcbLvAVtP-BqojfnMbQVfpawx3Wur1Ld_Nuxfbsw=s2048)
+	- ### Ventajas: 
+		- Flexibilidad: Variedad más amplia de datos.
+		- Escalabilidad: Económicos de escalar
+	- ### Desventajas:
+		- Gestión y organización: Variedad de datos dificulta la gestión y organización de los datos. 
+		- Mayor complejidad.
+	- ### Arquitectura de data lake:
+		- **![](https://lh7-us.googleusercontent.com/39-qFr2AkDQ9pCmLozh_BiWlcFUB5L6laHwK1_lrJszIayD1ecXy_419BUCzKimmm6sZJ8F69wgld21qKwc5Bc_S6-7r1ksgI-O45SuuNr8XWEmldyv_eeYZ6enzC_ei1dOCQEwm9-D1qxXHeiPK4N1IQg=s2048)**
+		- #### Capa de datos sin procesar (Raw)
+			- Esta capa también se conoce como capa de ingestión o área de aterrizaje, ya que actúa como el sumidero del data lake. El objetivo principal es ingerir datos sin procesar de forma rápida y eficiente. No se permiten transformaciones en esta etapa. No se permite la sobreescritura (es decir, el manejo de versiones duplicadas de los mismos datos). A los usuarios finales no se les concede acceso a esta capa. Estos no son datos listos para usar y requieren mucho conocimiento en términos de consumo relevante.
+		- #### **Capa de datos estandarizados (Standarized)**
+			- Esta capa es opcional en la mayoría de las implementaciones. Si se espera un crecimiento rápido para la arquitectura del data lake, entonces esta es una buena opción. El objetivo principal de la capa estandarizada es aumentar el rendimiento de la transferencia de datos desde la capa sin procesar a la capa curada. En la capa sin procesar, los datos se almacenan en su formato nativo, mientras que en la capa estandarizada se selecciona el formato adecuado que mejor se adapta a la limpieza.
+		- #### Capa de datos limpios o curados (Cleansed)
+			- En esta capa, los datos se transforman en conjuntos de datos consumibles y se almacenan en archivos o tablas. Esta es una de las partes más complejas de toda la solución del data lake, ya que requiere la limpieza, transformación, desnormalización y consolidación de diferentes objetos. Además, los datos se organizan por propósito, tipo y estructura de archivos. Por lo general, a los usuarios finales solo se les concede acceso a esta capa.
+		- #### Capa de aplicación (Application)
+			- Esta capa también se conoce como capa confiable, capa segura o capa de producción. Se obtiene de la capa limpiada y se aplica con la lógica empresarial necesaria. En caso de que las aplicaciones utilicen modelos de aprendizaje automático en el data lake, se obtienen de aquí. La estructura de los datos es la misma que en la capa limpiada.
+		- #### Capa de datos de sandbox 
+			- Esta es otra capa opcional que está destinada al trabajo de analistas y científicos de datos para realizar experimentos y buscar patrones o correlaciones. La capa de datos de sandbox es el lugar adecuado para enriquecer los datos con cualquier fuente de Internet.
+		- #### Gobernanza (Governance): 
+			- La supervisión y el registro de las operaciones se vuelven cruciales en algún momento al realizar análisis.
+		- #### Metadatos (Metadata):
+			- Son los datos sobre los datos. La mayoría de los esquemas recargan detalles adicionales del propósito de los datos, con descripciones sobre cómo deben ser explotados.
+		- #### Administración (Stewardship): 
+			- En función de la escala que se requiera, se llevará a cabo la creación de un rol separado o la delegación de esta responsabilidad a los usuarios, posiblemente a través de algunas soluciones de metadatos.
+		- #### Datos maestros (Master Data): 
+			- Son una parte esencial para servir datos listos para usar. Se pueden almacenar en el data lake o referenciar mientras se ejecutan procesos ETL.
+		- #### Archivo (Archieve): 
+			- Los data lakes conservan algunos datos de archivo que provienen del almacenamiento de datos. De lo contrario, pueden ocurrir problemas de rendimiento y almacenamiento.
+		- #### Offload: 
+			- Esta área ayuda a desviar algunos procesos ETL que consumen tiempo y recursos a un data lake en el caso de soluciones de almacenamiento de datos relacionales.
+		- ####  Orquestación y procesos ELT: 
+			- Una vez que los datos se envían desde la capa sin procesar a través de la capa curada y a las capas de sandbox y aplicación, se requiere una herramienta para orquestar el flujo. Se utilizan una herramienta de orquestación o algunos recursos adicionales para ejecutarlos.
+			- Muchas implementaciones de data lakes se basan originalmente en Apache Hadoop. 
+			- El sistema Hadoop es una herramienta de big data muy popular, especialmente adecuada para cargas de trabajo de procesamiento por lotes de big data. Utiliza HDFS como su almacenamiento principal y MapReduce (MR) como el modelo de computación básico.
+
+**![](https://lh7-us.googleusercontent.com/TTE8GtY_bsVQj92H23HLMTmpciBuzhIaiia6GIaIAYICbj01k2N3SwHTkwCPu6UggoX2g4JMhVYgCtf87qf9R5WvTmtnvr3EI_x_NMutU87UM1nCrDbMHO2F2pCglAt81lOtFCLaJ7x4VXdPpdnQ3QNkaA=s2048)**
+
+**![](https://lh7-us.googleusercontent.com/RIamoHgeZa-FJWNV631Q2M5_k1gfL4AF2bB_xXj3tTlLk267lvm4_ShsebW5wcGOvheVS92gulFLlnlUlN6ei7lifRnlOOtPh5hcXGjLi8Rwtyfj7xSHxlSLKzEhU0cT8o91RbXFfAJDUfTC4IXRpzaECg=s2048)**
+
+- Los Data Lakes son adecuados para el análisis avanzado, incluyendo el aprendizaje automático, ya que proporcionan acceso a datos sin procesar que pueden ser útiles para la capacitación de modelos.
+- Los Data Warehouses son ideales para datos estructurados y limpios que han sido procesados, transformados y limpiados previamente. Son ideales para almacenar datos listos para análisis y generación de informes.
